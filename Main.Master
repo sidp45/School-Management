@@ -1,0 +1,99 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="Design.Main" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title></title>
+    <meta charset="utf-8">
+
+    <style>
+        footer {
+            background-color: #002b54;
+            padding: 25px;
+        }
+
+        .text-center {
+            color: white;
+            text-align: center;
+        }
+    </style>
+    <link href="Styles/main.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="header">
+            <img src="Images/logo1.jpg" />
+            <div class="header-right">
+            </div>
+        </div>
+        <nav class="navbar navbar-inverse " style="background-color: #002b54; border-radius: 0px">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">SchoolManagement</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="Home.aspx">Home</a></li>
+                    <li><a href="CONTACT US.aspx">CONTACT US</a></li>
+                    <li><a href="ABOUT US.aspx">ABOUT US</a></li>
+                    <li><a href="Employee.aspx">EMPLOYEE</a></li>
+                    <li><a href="Admin.aspx">ADMIN</a></li>
+                    <li><a href="SchoolDetails.aspx">ADMIN DETAILS</a></li>
+                </ul>
+               <ul class="nav navbar-nav navbar-right"><li>
+                    <li><a href="Login.aspx" runat="server" id="disp"></a></li>
+       <li><a href="Login.aspx"><span class="glyphicon glyphicon-log-in"></span>Logout</a></li>
+    </ul>
+
+
+            </div>
+        </nav>
+
+        <div class="container" style="vertical-align: top; left: 11px; right: 11px; color: #000080;">
+
+
+            <br />
+            <asp:HyperLink ID="insert" runat="server" NavigateUrl="~/Admin.aspx" cssClass="btn bg-primary">INSERT SCHOOL</asp:HyperLink>
+          
+        <asp:HyperLink ID="update" runat="server" NavigateUrl="~/Update.aspx" cssClass="btn btn-success">UPDATE SCHOOL</asp:HyperLink>
+           
+        <asp:HyperLink ID="delete" runat="server" NavigateUrl="~/Delete.aspx" cssClass="btn btn-danger">DELETE SCHOOL</asp:HyperLink>
+           
+         <asp:HyperLink ID="srecord" runat="server" NavigateUrl="~/SchoolDetails.aspx" cssClass="btn btn-warning">SCHOOL  RECORD</asp:HyperLink>
+            
+         <asp:HyperLink ID="erecord" runat="server" NavigateUrl="EmployeeRecord.aspx" cssClass="btn btn-warning">EMPLOYEE RECORD</asp:HyperLink>
+           
+        <asp:HyperLink ID="insertemp" runat="server" NavigateUrl="~/Employee.aspx" cssClass="btn btn-primary">INSERT EMP</asp:HyperLink>
+            
+        <asp:HyperLink ID="updateemp" runat="server" NavigateUrl="~/UpdateEmp.aspx" cssClass="btn btn-success">UPDATE EMP</asp:HyperLink>
+        <asp:HyperLink ID="deleteemp" runat="server" NavigateUrl="~/DeleteEmp.aspx" cssClass="btn btn-danger">DELETE EMP</asp:HyperLink>
+            <br />
+            <br />
+
+        </div>
+
+
+
+        <div class="container">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <br />
+
+        <footer class="container-fluid text-center">
+            <p>Sidp926@Gmail.com</p>
+        </footer>
+
+    </form>
+
+</body>
+</html>
+
